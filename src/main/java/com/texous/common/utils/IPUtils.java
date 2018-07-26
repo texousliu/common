@@ -52,16 +52,6 @@ public class IPUtils {
 
         final Long IPNum = 3232238347L;
         System.out.println(getIPString(IPNum));
-        // 4278190080
-        // 16711680
-        // 65280
-        // 255
-        System.out.println(Long.toBinaryString(4278190080L));
-        System.out.println(Long.toBinaryString(16711680L));
-        System.out.println(Long.toBinaryString(65280L));
-        System.out.println(Long.toBinaryString(255L));
-
-
 
     }
 
