@@ -61,6 +61,8 @@ public class IPUtils {
         System.out.println(Long.toBinaryString(65280L));
         System.out.println(Long.toBinaryString(255L));
 
+
+
     }
 
 }
