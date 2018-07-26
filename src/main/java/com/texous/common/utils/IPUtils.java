@@ -14,7 +14,7 @@ public class IPUtils {
      * @return
      */
     public static Long getIPNum(final String IP) {
-        Long IPNum = 0l;
+        Long IPNum = 0L;
         final String IPStr = IP.trim();
         if (IP != null && IPStr.length() != 0) {
             final String[] subips = IPStr.split("\\.");
@@ -36,7 +36,9 @@ public class IPUtils {
         final Long andNumbers[] = { 0xff000000L, 0x00ff0000L, 0x0000ff00L, 0x000000ffL };
         final StringBuilder IPStrSb = new StringBuilder();
         for (int i = 0; i < 4; i++) {
-            IPStrSb.append(String.valueOf((IPNum & andNumbers[i]) >> 8 * (3 - i)));
+            // 获取需要的位数的值， 别的位数的值转为0
+            long tempIPNum = IPNum & andNumbers[i];
+            IPStrSb.append(String.valueOf(tempIPNum >> 8 * (3 - i)));
             if (i != 3) {
                 IPStrSb.append(".");
             }
@@ -50,6 +52,15 @@ public class IPUtils {
 
         final Long IPNum = 3232238347L;
         System.out.println(getIPString(IPNum));
+        // 4278190080
+        // 16711680
+        // 65280
+        // 255
+        System.out.println(Long.toBinaryString(4278190080L));
+        System.out.println(Long.toBinaryString(16711680L));
+        System.out.println(Long.toBinaryString(65280L));
+        System.out.println(Long.toBinaryString(255L));
+
     }
 
 }
