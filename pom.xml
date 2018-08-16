@@ -25,15 +25,6 @@
             <version>5.0.7.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.0</version>
-            <scope>provided</scope>
-        </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -60,9 +51,6 @@
                     <encoding>UTF-8</encoding>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <compilerArguments>
-                        <bootclasspath>${JAVA_HOME}/jre/lib/rt.jar</bootclasspath>
-                    </compilerArguments>
                 </configuration>
             </plugin>
             <plugin>
